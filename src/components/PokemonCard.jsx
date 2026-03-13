@@ -6,7 +6,11 @@ export function PokemonCard({ pokemon: p, onClick }) {
       <h3>{p.name}</h3>
       <div className="tipos">
         {p.types.map(t => (
-          <span key={t.type.name} className={`tipo ${t.type.name}`}>
+          <span
+            key={t.type.name}
+            className={`tipo ${t.type.name}`}
+            style={{ textTransform: 'capitalize' }}
+          >
             {t.type.name}
           </span>
         ))}
